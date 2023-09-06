@@ -74,6 +74,13 @@ function drawLetter(posx, posy, letterData) {
   ellipse(posx, posy, 150, 150);
   fill(lightBlue);
   ellipse(pos2x, pos2y, size2, size2);
+
+
+// myletters
+
+  line(posx, posy, 150, 150)
+
+
 }
 
 function keyTyped() {
