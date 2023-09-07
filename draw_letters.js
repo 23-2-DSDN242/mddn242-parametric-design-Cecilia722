@@ -1,5 +1,5 @@
 /* these are optional special variables which will change the system */
-var systemBackgroundColor = "#caf0f8";
+var systemBackgroundColor = "#ead4b8";
 var systemLineColor = "#000090";
 var systemBoxColor = "#00c800";
 
@@ -19,6 +19,7 @@ function drawLetter(letterData) {
   // color/stroke setup
   stroke(strokeColor);
   strokeWeight(5);
+  noStroke();
 
   // determine parameters for second circle
   let size2 = letterData["size"];

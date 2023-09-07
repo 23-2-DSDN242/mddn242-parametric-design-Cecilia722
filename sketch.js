@@ -14,8 +14,18 @@ const canvasHeight = 500;
 
 const letterA = {
   "size": 80,
-  "offsetx": 0,
-  "offsety": 35
+  "size_v":20,
+
+  "offsetx": -100,
+  "offsety": -100
+
+  
+
+
+
+
+
+
 }
 
 const letterB = {
@@ -30,11 +40,12 @@ const letterC = {
   "offsety": 0
 }
 
-const backgroundColor  = "#caf0f8";
+const backgroundColor  = "#caf0c8";
 const strokeColor      = "#03045e";
 
 const darkBlue  = "#0077b6";
 const lightBlue  = "#90e0ef";
+const Brown ="#37211C"
 
 function setup () {
   // create the drawing canvas, save the canvas element
@@ -66,19 +77,33 @@ function draw () {
 function drawLetter(posx, posy, letterData) {
   // determine parameters for second circle
   let size2 = letterData["size"];
+  let size_v2= letterData["size_v"]
+
+
   let pos2x = posx + letterData["offsetx"];
   let pos2y = posy + letterData["offsety"];
+
+  let pos3x = posx + letterData["offsetx"];
+  let pos3y = posy + letterData["offsety"];
+
+  let pos4x = posx + letterData["offsetx"];
+  let pos4y = posy + letterData["offsety"];
 
   // draw two circles
   fill(darkBlue);
   ellipse(posx, posy, 150, 150);
   fill(lightBlue);
   ellipse(pos2x, pos2y, size2, size2);
+  
 
 
-// myletters
+// My Letters
+  noStroke()
+  fill(Brown)
+  rect (pos2x, pos2y, size_v2, 250)
 
-  line(posx, posy, 150, 150)
+  rect (pos3x, pos3y, 150,20)
+
 
 
 }
