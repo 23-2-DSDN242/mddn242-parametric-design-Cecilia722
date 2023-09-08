@@ -16,5 +16,13 @@ const alphabet = {
   
   },
 
-
+ 
+  "B": {
+    "size": 80,
+    "size_v":20,
+  
+    "offsetx": -100,
+    "offsety": -100
+  
+  },
 }
