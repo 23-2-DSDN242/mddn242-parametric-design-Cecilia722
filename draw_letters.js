@@ -31,6 +31,7 @@ function drawLetter(letterData) {
   ellipse(50, 150, 75, 75);
   fill(lightBlue);
   ellipse(pos2x, pos2y, size2, size2);
+  rect (pos2x, pos2y, size2, 250)
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
