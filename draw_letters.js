@@ -28,6 +28,7 @@ function drawLetter(letterData) {
   let size_v= letterData["size_v"];
   let pos3x= 50+letterData["x_2"];
   let pos3y=150 +letterData["y_2"];
+  let roate_1 = letterData["rotate_1"];
   let size3= letterData["size3"];
   let size_v3= letterData["size_v3"]
 
@@ -38,8 +39,9 @@ function drawLetter(letterData) {
   fill(lightBlue);
   ellipse(pos2x, pos2y, size2, size2);
   fill("#37211C")
-  rect (pos2x, pos2y, size2, size_v)
-  rect (pos3x, pos3y, size3, size_v3)
+  rect (pos2x, pos2y, 22.5, size_v);
+  rotate(roate_1)
+  rect (pos3x, pos3y, size3, 22.5)
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
