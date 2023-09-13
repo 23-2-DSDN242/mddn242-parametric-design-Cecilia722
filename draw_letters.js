@@ -25,13 +25,21 @@ function drawLetter(letterData) {
   let size2 = letterData["size"];
   let pos2x = 50  + letterData["offsetx"];
   let pos2y = 150 + letterData["offsety"];
+  let size_v= letterData["size_v"];
+  let pos3x= 50+letterData["x_2"];
+  let pos3y=150 +letterData["y_2"];
+  let size3= letterData["size3"];
+  let size_v3= letterData["size_v3"]
+
 
   // draw two circles
   fill(darkBlue);
   ellipse(50, 150, 75, 75);
   fill(lightBlue);
   ellipse(pos2x, pos2y, size2, size2);
-  rect (pos2x, pos2y, size2, 250)
+  fill("#37211C")
+  rect (pos2x, pos2y, size2, size_v)
+  rect (pos3x, pos3y, size3, size_v3)
 }
 
 function interpolate_letter(percent, oldObj, newObj) {

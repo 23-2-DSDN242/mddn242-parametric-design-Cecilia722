@@ -4,7 +4,13 @@ const alphabet = {
     "size_v":20,
   
     "offsetx": 0,
-    "offsety": 0
+    "offsety": 0,
+
+    "x_2":0,
+    "y_2":0,
+    "size3":0,
+    "size_v3":0
+    
   },
  
   "A": {
