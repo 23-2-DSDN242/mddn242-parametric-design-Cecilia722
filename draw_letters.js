@@ -22,26 +22,77 @@ function drawLetter(letterData) {
   noStroke();
 
   // determine parameters for second circle
-  let size2 = letterData["size"];
-  let pos2x = 50  + letterData["offsetx"];
-  let pos2y = 150 + letterData["offsety"];
+  // let size2 = letterData["size"];
+  let pos2x =  letterData["offsetx"];
+  let pos2y = letterData["offsety"];
   let size_v= letterData["size_v"];
-  let pos3x= 50+letterData["x_2"];
-  let pos3y=150 +letterData["y_2"];
-  let roate_1 = letterData["rotate_1"];
+  let pos3x= letterData["x_2"];
+  let pos3y= letterData["y_2"];
+  let rotate_1 = letterData["rotate_1"];
   let size3= letterData["size3"];
-  let size_v3= letterData["size_v3"]
+
+
+  let pos4x = letterData["x_4"]
+  let pos4y =letterData["y_4"]
+  let rotate_2=letterData["rotate_2"]
+  let size4=letterData["size4"]
+
+  let pos5x = letterData["x_5"]
+  let pos5y =letterData["y_5"]
+  let rotate_3=letterData["rotate_3"]
+  let size_v2= letterData["size_v2"]
+  let rotate_0 = letterData["rotate_0"]
+
+
+  let pos6x = letterData["x_6"]
+  let pos6y =letterData["y_6"]
+  let rotate_4=letterData["rotate_4"]
+  let size6= letterData["size6"]
+ 
 
 
   // draw two circles
   fill(darkBlue);
   ellipse(50, 150, 75, 75);
   fill(lightBlue);
-  ellipse(pos2x, pos2y, size2, size2);
+  ellipse(50, 75, 30, 30);
   fill("#37211C")
-  rect (pos2x, pos2y, 22.5, size_v);
-  rotate(roate_1)
-  rect (pos3x, pos3y, size3, 22.5)
+ 
+  push();
+  translate(pos2x,pos2y);
+  rotate(rotate_0)
+  rect (pos2x, pos2y, 14, size_v);
+  pop();
+
+
+
+  push();
+  translate(pos3x,pos3y)
+  rotate(rotate_1)
+  rect (pos3x, pos3y, size3, 14)
+  pop();
+
+  push();
+  translate(pos4x,pos4y)
+  rotate(rotate_2)
+  rect (pos4x, pos4y, size4, 14)
+  pop();
+
+  push();
+  translate(pos6x,pos6y)
+  rotate(rotate_4)
+  rect (pos6x, pos6y, size6, 14)
+  pop();
+
+
+  push();
+  translate(pos5x,pos5y)
+  rotate(rotate_3)
+  rect (pos5x, pos5y, 14, size_v2);
+  pop();
+
+
+
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
