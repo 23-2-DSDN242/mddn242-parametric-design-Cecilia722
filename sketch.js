@@ -13,31 +13,77 @@ const canvasHeight = 500;
  */
 
 const letterA = {
-  "size": 80,
-  "size_v":20,
-
-  "offsetx": -100,
-  "offsety": -100
-
-  
-
-
-
+  "size_v": 125,
+  "offsetx": 12.040000000000001,
+  "offsety": 24,
+  "rotate_0": 0,
+  "size3": 57,
+  "x_2": 26.700000000000003,
+  "y_2": 43,
+  "rotate_1": 25.19999999999999,
+  "size4": 57,
+  "x_4": 23.4,
+  "y_4": 20,
+  "rotate_2": 21.600000000000023,
+  "size_v2": 0,
+  "x_5": 0,
+  "y_5": 0,
+  "rotate_3": -108,
+  "size6": 0,
+  "rotate_4": 0,
+  "x_6": 0,
+  "y_6": 0
 
 
 
 }
 
 const letterB = {
-  "size": 150,
-  "offsetx": 0,
-  "offsety": -145
+  "size_v": 125,
+  "offsetx": 100,
+  "offsety": 24,
+  "rotate_0": 0,
+  "size3": 57,
+  "x_2": 26.700000000000003,
+  "y_2": 43,
+  "rotate_1": 25.19999999999999,
+  "size4": 57,
+  "x_4": 23.4,
+  "y_4": 20,
+  "rotate_2": 21.600000000000023,
+  "size_v2": 0,
+  "x_5": 0,
+  "y_5": 0,
+  "rotate_3": -108,
+  "size6": 0,
+  "rotate_4": 0,
+  "x_6": 0,
+  "y_6": 0
+
 }
 
 const letterC = {
-  "size": 100,
-  "offsetx": 30,
-  "offsety": 0
+  "size_v": 125,
+  "offsetx": 12.040000000000001,
+  "offsety": 24,
+  "rotate_0": 0,
+  "size3": 57,
+  "x_2": 26.700000000000003,
+  "y_2": 43,
+  "rotate_1": 25.19999999999999,
+  "size4": 57,
+  "x_4": 23.4,
+  "y_4": 20,
+  "rotate_2": 21.600000000000023,
+  "size_v2": 0,
+  "x_5": 0,
+  "y_5": 0,
+  "rotate_3": -108,
+  "size6": 0,
+  "rotate_4": 0,
+  "x_6": 0,
+  "y_6": 0
+
 }
 
 const backgroundColor  = "#caf0c8";
@@ -77,32 +123,77 @@ function draw () {
 function drawLetter(posx, posy, letterData) {
   // determine parameters for second circle
   let size2 = letterData["size"];
-  let size_v2= letterData["size_v"]
+  let pos2x =  75+letterData["offsetx"];
+  let pos2y = 250+letterData["offsety"];
+  let size_v= letterData["size_v"];
+  let pos3x= 75+letterData["x_2"];
+  let pos3y= 250+letterData["y_2"];
+  let rotate_1 = letterData["rotate_1"];
+  let size3= letterData["size3"];
 
 
-  let pos2x = posx + letterData["offsetx"];
-  let pos2y = posy + letterData["offsety"];
+  let pos4x = letterData["x_4"]
+  let pos4y =letterData["y_4"]
+  let rotate_2=letterData["rotate_2"]
+  let size4=letterData["size4"]
 
-  let pos3x = posx + letterData["offsetx"];
-  let pos3y = posy + letterData["offsety"];
+  let pos5x = letterData["x_5"]
+  let pos5y =letterData["y_5"]
+  let rotate_3=letterData["rotate_3"]
+  let size_v2= letterData["size_v2"]
+  let rotate_0 = letterData["rotate_0"]
 
-  let pos4x = posx + letterData["offsetx"];
-  let pos4y = posy + letterData["offsety"];
+
+  let pos6x = letterData["x_6"]
+  let pos6y =letterData["y_6"]
+  let rotate_4=letterData["rotate_4"]
+  let size6= letterData["size6"]
+ 
 
   // draw two circles
   fill(darkBlue);
   ellipse(posx, posy, 150, 150);
   fill(lightBlue);
-  ellipse(pos2x, pos2y, size2, size2);
+ 
   
 
 
 // My Letters
   noStroke()
   fill(Brown)
-  rect (pos2x, pos2y, size_v2, 250)
+  push();
+  translate(0,0);
+  rotate(rotate_0)
+  rect (pos2x, pos2y, 14, size_v);
+  pop();
 
-  rect (pos3x, pos3y, 150,20)
+
+
+  push();
+  translate(0,0)
+  rotate(rotate_1)
+  rect (pos3x, pos3y, size3, 14)
+  pop();
+
+  push();
+  translate(0,0)
+  rotate(rotate_2)
+  rect (pos4x, pos4y, size4, 14)
+  pop();
+
+  push();
+  translate(0,0)
+  rotate(rotate_4)
+  rect (pos6x, pos6y, size6, 14)
+  pop();
+
+
+  push();
+  translate(0,0)
+  rotate(rotate_3)
+  rect (pos5x, pos5y, 14, size_v2);
+  pop();
+
 
 
 

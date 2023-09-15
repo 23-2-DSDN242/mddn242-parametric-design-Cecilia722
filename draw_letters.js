@@ -32,12 +32,12 @@ function drawLetter(letterData) {
   let size3= letterData["size3"];
 
 
-  let pos4x = letterData["x_4"]
+  let pos4x =letterData["x_4"]
   let pos4y =letterData["y_4"]
   let rotate_2=letterData["rotate_2"]
   let size4=letterData["size4"]
 
-  let pos5x = letterData["x_5"]
+  let pos5x =letterData["x_5"]
   let pos5y =letterData["y_5"]
   let rotate_3=letterData["rotate_3"]
   let size_v2= letterData["size_v2"]
@@ -59,7 +59,7 @@ function drawLetter(letterData) {
   fill("#37211C")
  
   push();
-  translate(pos2x,pos2y);
+  translate(pos2x, pos2y,);
   rotate(rotate_0)
   rect (pos2x, pos2y, 14, size_v);
   pop();
@@ -67,26 +67,26 @@ function drawLetter(letterData) {
 
 
   push();
-  translate(pos3x,pos3y)
+  translate(pos3x, pos3y,)
   rotate(rotate_1)
   rect (pos3x, pos3y, size3, 14)
   pop();
 
   push();
-  translate(pos4x,pos4y)
+  translate(pos4x, pos4y)
   rotate(rotate_2)
   rect (pos4x, pos4y, size4, 14)
   pop();
 
   push();
-  translate(pos6x,pos6y)
+  translate(pos6x, pos6y)
   rotate(rotate_4)
   rect (pos6x, pos6y, size6, 14)
   pop();
 
 
   push();
-  translate(pos5x,pos5y)
+  translate(pos5x, pos5y)
   rotate(rotate_3)
   rect (pos5x, pos5y, 14, size_v2);
   pop();
