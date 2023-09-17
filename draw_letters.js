@@ -8,6 +8,7 @@ const darkBlue  = "#0077b6";
 const lightBlue  = "#90e0ef";
 const strokeColor  = "#03045e";
 
+
 /*
  * Draw the letter given the letterData
  *
@@ -20,6 +21,7 @@ function drawLetter(letterData) {
   stroke(strokeColor);
   strokeWeight(5);
   noStroke();
+  angleMode(DEGREES);
 
   // determine parameters for second circle
   // let size2 = letterData["size"];
