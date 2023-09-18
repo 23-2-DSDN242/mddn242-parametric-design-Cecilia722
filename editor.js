@@ -10,7 +10,7 @@ const sliderInfo = [
   // ["size",       0, 100],
   ["size_v",0,250],
 
-  ["offsetx",  0,  50-7],
+  ["offsetx",  -80,  80],
   ["offsety", -150, 150],
   ["rotate_0",-180,180],
 
@@ -34,6 +34,8 @@ const sliderInfo = [
   ["x_6",-90,90],
   ["y_6",-100,100],
   ["rotate_4",-180,180],
+
+ 
   
 
 
