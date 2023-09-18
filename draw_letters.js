@@ -53,11 +53,7 @@ function drawLetter(letterData) {
  
 
 
-  // draw two circles
-  fill(darkBlue);
-  ellipse(50, 150, 75, 75);
-  fill(lightBlue);
-  ellipse(50, 75, 30, 30);
+  
   fill("#37211C")
  
   push();
@@ -175,5 +171,5 @@ function interpolate_letter(percent, oldObj, newObj) {
 var swapWords = [
   "FUTHARKY",
   "ALPHABET",
-  "11RUNE11"
+  "21RUNE12"
 ]
