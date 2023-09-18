@@ -102,6 +102,73 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
   new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
   new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  new_letter["size_v"] = map(percent, 0, 100, oldObj["size_v"], newObj["size_v"]);
+
+
+  new_letter["x_2"] = map(percent, 0, 100, oldObj["x_2"], newObj["x_2"]);
+  new_letter["y_2"] = map(percent, 0, 100, oldObj["y_2"], newObj["y_2"]);
+  new_letter["rotate_1"] = map(percent, 0, 100, oldObj["rotate_1"], newObj["rotate_1"]);
+  new_letter["size3"] = map(percent, 0, 100, oldObj["size3"], newObj["size3"]);
+
+  // new_letter["x_4"] = map(percent, 0, 100, oldObj["x_4"], newObj["x_4"]);
+  // new_letter["y_4"] = map(percent, 0, 100, oldObj["y_4"], newObj["y_4"]);
+  // new_letter["rotate_2"] = map(percent, 0, 100, oldObj["rotate_2"], newObj["rotate_2"]);
+  // new_letter["size4"] = map(percent, 0, 100, oldObj["size4"], newObj["size4"]);
+
+
+  // new_letter["x_5"] = map(percent, 0, 100, oldObj["x_5"], newObj["x_5"]);
+  // new_letter["y_5"] = map(percent, 0, 100, oldObj["y_5"], newObj["y_5"]);
+  // new_letter["rotate_3"] = map(percent, 0, 100, oldObj["rotate_3"], newObj["rotate_3"]);
+  // new_letter["size_v2"] = map(percent, 0, 100, oldObj["size_v2"], newObj["size_v2"]);
+
+  new_letter["rotate_0"] = map(percent, 0, 100, oldObj["rotate_0"], newObj["rotate_0"]);
+
+  new_letter["x_6"] = map(percent, 0, 100, oldObj["x_6"], newObj["x_6"]);
+  new_letter["y_6"] = map(percent, 0, 100, oldObj["y_6"], newObj["y_6"]);
+  new_letter["rotate_4"] = map(percent, 0, 100, oldObj["rotate_4"], newObj["rotate_4"]);
+  new_letter["size6"] = map(percent, 0, 100, oldObj["size6"], newObj["size6"]);
+
+
+
+    if (percent < 50) {
+     
+  
+      new_letter["x_5"] = map(percent, 0, 49, oldObj["x_5"], 0);
+      new_letter["y_5"] = map(percent, 0, 49, oldObj["y_5"], 0);
+      new_letter["rotate_3"] = map(percent, 0, 49, oldObj["arotate_3"], 0);
+      new_letter["size_v2"] = map(percent, 0, 49, oldObj["size_v2"], 0);
+  
+   
+    } else {
+
+   
+      new_letter["x_5"] = map(percent, 50, 100, 0, newObj["x_5"]);
+      new_letter["y_5"] = map(percent, 50, 100, 0, newObj["y_5"]);
+      new_letter["rotate_3"] = map(percent, 50, 100, 0, newObj["rotate_3"]);
+      new_letter["size_v2"] = map(percent, 50, 100, 0, newObj["size_v2"]);
+    }
+
+
+    if (percent < 80) {
+     
+  
+      new_letter["x_4"] = map(percent, 0, 79, oldObj["x_4"], 0);
+      new_letter["y_4"] = map(percent, 0, 79, oldObj["y_4"], 0);
+      new_letter["rotate_2"] = map(percent, 0, 79, oldObj["arotate_2"], 0);
+      new_letter["size_4"] = map(percent, 0, 79, oldObj["size4"], 0);
+  
+   
+    } else {
+
+   
+      new_letter["x_4"] = map(percent, 80, 100, 0, newObj["x_4"]);
+      new_letter["y_4"] = map(percent, 80, 100, 0, newObj["y_4"]);
+      new_letter["rotate_2"] = map(percent, 80, 100, 0, newObj["rotate_2"]);
+      new_letter["size4"] = map(percent, 80, 100, 0, newObj["size4"]);
+    }
+
+
+
   return new_letter;
 }
 
