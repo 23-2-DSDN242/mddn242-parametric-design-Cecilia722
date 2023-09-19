@@ -22,29 +22,32 @@ function drawLetter(letterData) {
   noStroke();
   angleMode(DEGREES);
 
-  // determine parameters for second circle
-  // let size2 = letterData["size"];
+//1st vertical stroke
   let pos2x =  letterData["offsetx"];
   let pos2y = letterData["offsety"];
   let size_v= letterData["size_v"];
+  let rotate_0 = letterData["rotate_0"];
+
+//1st horizontal stroke
   let pos3x= letterData["x_2"];
   let pos3y= letterData["y_2"];
   let rotate_1 = letterData["rotate_1"];
   let size3= letterData["size3"];
 
-
+//2nd horizontal stroke
   let pos4x =letterData["x_4"]
   let pos4y =letterData["y_4"]
   let rotate_2=letterData["rotate_2"]
   let size4=letterData["size4"]
 
+//2nd vertical stroke
   let pos5x =letterData["x_5"]
   let pos5y =letterData["y_5"]
   let rotate_3=letterData["rotate_3"]
   let size_v2= letterData["size_v2"]
-  let rotate_0 = letterData["rotate_0"]
+ 
 
-
+//3rd horizontal stroke
   let pos6x = letterData["x_6"]
   let pos6y =letterData["y_6"]
   let rotate_4=letterData["rotate_4"]
@@ -53,7 +56,7 @@ function drawLetter(letterData) {
 
 
   
-  fill("#37211C")
+  fill("#37211C")//Brown
  
   push();
   translate(pos2x, pos2y,);
@@ -105,16 +108,7 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["rotate_1"] = map(percent, 0, 100, oldObj["rotate_1"], newObj["rotate_1"]);
   new_letter["size3"] = map(percent, 0, 100, oldObj["size3"], newObj["size3"]);
 
-  // new_letter["x_4"] = map(percent, 0, 100, oldObj["x_4"], newObj["x_4"]);
-  // new_letter["y_4"] = map(percent, 0, 100, oldObj["y_4"], newObj["y_4"]);
-  // new_letter["rotate_2"] = map(percent, 0, 100, oldObj["rotate_2"], newObj["rotate_2"]);
-  // new_letter["size4"] = map(percent, 0, 100, oldObj["size4"], newObj["size4"]);
-
-
-  // new_letter["x_5"] = map(percent, 0, 100, oldObj["x_5"], newObj["x_5"]);
-  // new_letter["y_5"] = map(percent, 0, 100, oldObj["y_5"], newObj["y_5"]);
-  // new_letter["rotate_3"] = map(percent, 0, 100, oldObj["rotate_3"], newObj["rotate_3"]);
-  // new_letter["size_v2"] = map(percent, 0, 100, oldObj["size_v2"], newObj["size_v2"]);
+  
 
   new_letter["rotate_0"] = map(percent, 0, 100, oldObj["rotate_0"], newObj["rotate_0"]);
 
@@ -124,7 +118,7 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["size6"] = map(percent, 0, 100, oldObj["size6"], newObj["size6"]);
 
 
-
+// creat different pace for the animation.
     if (percent < 50) {
      
   
@@ -170,5 +164,13 @@ function interpolate_letter(percent, oldObj, newObj) {
 var swapWords = [
   "FUTHARKY",
   "ALPHABET",
-  "21RUNE12"
+  "21RUNE12",
+  "MYSTICAL",
+  "TIMELESS",
+  "WIZARDRY",
+  "PECULIAR",
+  "WITCHERY"
+
+
+
 ]
