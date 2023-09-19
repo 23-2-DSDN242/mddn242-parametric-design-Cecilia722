@@ -7,30 +7,34 @@
 
 
 const sliderInfo = [
-  // ["size",       0, 100],
+  
+//1st vertical stroke
   ["size_v",0,250],
-
   ["offsetx",  -80,  80],
   ["offsety", -150, 150],
   ["rotate_0",-180,180],
 
+
+//1st horizontal stroke
   ["size3",       0, 150],
   ["x_2",  -30,  60],
   ["y_2", -100, 100],
   ["rotate_1", -180,  180],
- 
+
+//2nd horizontal stroke
   ["size4",0,150],
   ["x_4",-30,30],
   ["y_4",-100,100],
   ["rotate_2",-180,180],
   
+//2nd vertical stroke 
   ["size_v2",0,250],
   ["x_5",-90,90],
   ["y_5",-100,100],
   ["rotate_3",-180,180],
   
+//3rd horizontal stroke
   ["size6",0,100],
-
   ["x_6",-90,90],
   ["y_6",-100,100],
   ["rotate_4",-180,180],
