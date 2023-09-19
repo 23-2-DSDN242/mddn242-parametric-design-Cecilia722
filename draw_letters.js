@@ -3,9 +3,8 @@ var systemBackgroundColor = "#ead4b8";
 var systemLineColor = "#000090";
 var systemBoxColor = "#00c800";
 
-/* internal constants */
-const darkBlue  = "#0077b6";
-const lightBlue  = "#90e0ef";
+
+
 const strokeColor  = "#03045e";
 
 
